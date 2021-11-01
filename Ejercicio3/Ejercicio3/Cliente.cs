@@ -32,7 +32,7 @@ namespace Ejercicio3
 
             if (inserto)
             {
-                MessageBox.Show("Producto Registrado");
+                MessageBox.Show("Cliente Registrado");
 
                 NombreTextBox.Text = "";
                 NumIdentidadTextBox.Clear();
@@ -41,7 +41,7 @@ namespace Ejercicio3
             }
             else
             {
-                MessageBox.Show("No se registró el producto.");
+                MessageBox.Show("No se registró cliente.");
             }
 
         }

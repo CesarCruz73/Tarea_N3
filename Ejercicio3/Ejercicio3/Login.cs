@@ -40,7 +40,7 @@ namespace Ejercicio3
 
 
 
-            usuario.Nombre = CorreoTextBox.Text;
+            usuario.Correo = CorreoTextBox.Text;
             usuario.Clave = ContraseniaTextBox.Text;
 
             bool valido = conexion.ValidarUsuario(usuario);
@@ -57,6 +57,7 @@ namespace Ejercicio3
             {
                 MessageBox.Show("Datos de Usuario Incorrecto.");
             }
+
 
         }
     }

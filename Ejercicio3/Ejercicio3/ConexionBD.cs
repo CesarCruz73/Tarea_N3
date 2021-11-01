@@ -13,9 +13,9 @@ namespace Ejercicio3
     {
         public class ConexionDB
         {
-            readonly string cadena = "Data Source=192.168.1.240;Initial Catalog=Login;User ID=sa;Password=BaseDatos1";
+            readonly string cadena = "Data Source=192.168.1.240;Initial Catalog=Ejercicio3;User ID=sa;Password=BaseDatos1";
 
-            public bool ValidarUsuario(Usuario usuario)
+            public bool ValidarUsuario(Usuario user)
             {
                 bool esUsuarioValido = false;
 
@@ -30,8 +30,8 @@ namespace Ejercicio3
                         using (SqlCommand comando = new SqlCommand(sql.ToString(), _conexion))
                         {
                             comando.CommandType = CommandType.Text;
-                            comando.Parameters.Add("@Correo", SqlDbType.NVarChar, 50).Value = usuario.Correo;
-                            comando.Parameters.Add("@Clave", SqlDbType.NVarChar, 20).Value = usuario.Clave;
+                            comando.Parameters.Add("@Correo", SqlDbType.NVarChar, 50).Value = user.Correo;
+                            comando.Parameters.Add("@Clave", SqlDbType.NVarChar, 20).Value = user.Clave;
                             esUsuarioValido = Convert.ToBoolean(comando.ExecuteScalar());
 
                         }
